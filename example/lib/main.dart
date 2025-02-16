@@ -4,11 +4,13 @@ import 'package:flutter_hms_gms_availability/flutter_hms_gms_availability.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   bool gms = false, hms = false;
 
   @override
@@ -30,12 +32,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('HMS/GMS Availability'),
-        ),
-        body: Center(
-          child: Text('GMS Available:  $gms\nHMS Available:  $hms'),
-        ),
+        appBar: AppBar(title: const Text('HMS/GMS Availability')),
+        body: Center(child: Text('GMS Available:  $gms\nHMS Available:  $hms')),
       ),
     );
   }
